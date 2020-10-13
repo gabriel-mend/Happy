@@ -53,12 +53,12 @@ export default {
         };
 
         const schema = Yup.object().shape({
-            name: Yup.string().required('Nome obrigatório!'),
+            name: Yup.string().required('O campo nome é obrigatório.'),
             latitude: Yup.number().required(),
             longitude: Yup.number().required(),
-            about: Yup.string().required().max(300),
-            instructions: Yup.string().required(),
-            opening_hours: Yup.string().required(),
+            about: Yup.string().required('O campo sobre é obrigatório.').max(300),
+            instructions: Yup.string().required('O campo de instruções é obrigatório.'),
+            opening_hours: Yup.string().required('O campo horário de visitas é obrigatório.'),
             open_on_weekends: Yup.boolean().required(),
             images: Yup.array(Yup.object().shape({
                 path: Yup.string().required(),
