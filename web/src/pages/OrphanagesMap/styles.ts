@@ -26,14 +26,7 @@ export const Aside = styled.aside`
     }
 
     & footer {
-        display: flex;
-        flex-direction: column;
-
         line-height: 24px;
-
-        & strong {
-            font-weight: 800;
-        }
     }
 
     & a {

@@ -68,18 +68,8 @@ export const Location = styled.div`
     position: absolute;
     right: 0;
     top: 0;
-
     font-size: 24px;
     line-height: 34px;
-
-    display: flex;
-    flex-direction: column;
-
-    text-align: right;
-
-    & strong {
-        font-weight: 800;
-    }
 `;
 
 export const Button = styled.a`

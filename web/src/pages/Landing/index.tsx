@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import * as Styles from './styles';
 
 import logoImg from '../../images/Logo.svg';
+import City from '../../components/City';
 
 const Landing: React.FC = () => {
   return (
@@ -18,8 +19,7 @@ const Landing: React.FC = () => {
         </main>
 
         <Styles.Location>
-          <strong>São Luís</strong>
-          <span>Maranhão</span>
+          <City textAlign="right"/>
         </Styles.Location>
 
         <Link to="/app" > 

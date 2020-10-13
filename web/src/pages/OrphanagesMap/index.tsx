@@ -6,6 +6,7 @@ import { Map, TileLayer } from 'react-leaflet';
 
 import * as Styles from './styles';
 import appMakerImg from '../../images/Local.svg';
+import City from '../../components/City';
 
 const OrphanagesMap: React.FC = () => {
   return (
@@ -18,8 +19,7 @@ const OrphanagesMap: React.FC = () => {
           <p> Muitas crianças estão esperando a sua visita :)</p>
         </header>
         <footer>
-          <strong>São Luís</strong>
-          <span>Maranhão</span>
+          <City />
         </footer>
         <Link to="/" className="button">
           <FiPlus size={32} color="#fff" />
