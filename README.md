@@ -8,3 +8,4 @@
  <a href="">Autor</a> • 
  <a href="">Agradecimentos</a>
 </p>
+<img src="https://user-images.githubusercontent.com/49095200/95929117-98399500-0d99-11eb-891e-5ef1ac6ed0db.png" />
