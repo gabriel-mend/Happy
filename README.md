@@ -9,7 +9,7 @@
 </h4>
 
 ## 💬 Sobre o projeto
-Proffy - é um projeto que aproxima alunos de professores, dando a oportunidade de escolha através de filtros, resultando em perfis de professores, que dão seu valor de custo por hora de aula.
+Happy - É um projeto que tem objetivo de conectar pessoas com casas de abrigo, para que deem seu tempo em troca de felicidade para as crianças carentes.
 
 Projeto desenvolvido durante a **NLW - Next Level Week** oferecida pela [Rocketseat](https://blog.rocketseat.com.br/primeira-next-level-week/).
 
