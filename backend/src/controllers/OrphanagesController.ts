@@ -30,6 +30,7 @@ export default {
             longitude,
             about,
             instructions,
+            whatsapp,
             opening_hours,
             open_on_weekends,
         } = request.body;
@@ -47,6 +48,7 @@ export default {
             longitude,
             about,
             instructions,
+            whatsapp,
             opening_hours,
             open_on_weekends: open_on_weekends === 'true',
             images
@@ -58,6 +60,7 @@ export default {
             longitude: Yup.number().required(),
             about: Yup.string().required('O campo sobre é obrigatório.').max(300),
             instructions: Yup.string().required('O campo de instruções é obrigatório.'),
+            whatsapp: Yup.string().required('O campo whatsapp é obrigatório.'),
             opening_hours: Yup.string().required('O campo horário de visitas é obrigatório.'),
             open_on_weekends: Yup.boolean().required(),
             images: Yup.array(Yup.object().shape({

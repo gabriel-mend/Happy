@@ -148,9 +148,10 @@ export const OpenDetails = styled.div`
     }
 `;
 
-export const WhatssapButton = styled.button`
+export const WhatssapButton = styled.a`
     margin-top: 64px;
 
+    text-decoration: none;
     width: 100%;
     height: 64px;
     border: 0;
