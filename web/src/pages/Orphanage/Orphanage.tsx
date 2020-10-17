@@ -8,7 +8,8 @@ import L from 'leaflet';
 
 import mapMarkerImg from '../../images/Local.svg';
 
-import './orphanage.css';
+import * as Styles from './styles';
+
 import Sidebar from "../../components/Sidebar";
 import api from "../../services/api";
 
@@ -55,14 +56,14 @@ export default function Orphanage() {
   }
 
   return (
-    <div id="page-orphanage">
+    <Styles.Container id="page-orphanage">
       <Sidebar />
 
       <main>
-        <div className="orphanage-details">
+        <Styles.OrphanageDetails className="orphanage-details">
           <img src={orphanage.images[activeImageIndex].url} alt="Lar das meninas" />
 
-          <div className="images">
+          <Styles.Images className="images">
             {orphanage.images.map((image, index) => (
               <button 
                 key={image.id} 
@@ -75,13 +76,13 @@ export default function Orphanage() {
                 <img src={image.url} alt={orphanage.name} />
               </button>
             ))}
-          </div>
+          </Styles.Images>
           
-          <div className="orphanage-details-content">
+          <Styles.OrphanageDetailsContent className="orphanage-details-content">
             <h1>{orphanage.name}</h1>
             <p>{orphanage.about}</p>
 
-            <div className="map-container">
+            <Styles.MapContainer>
               <Map 
                 center={[orphanage.latitude,orphanage.longitude]} 
                 zoom={16} 
@@ -101,14 +102,14 @@ export default function Orphanage() {
               <footer>
                 <a target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps/dir/?api=1&destination=${orphanage.latitude},${orphanage.longitude}`}>Ver rotas no Google Maps</a>
               </footer>
-            </div>
+            </Styles.MapContainer>
 
             <hr />
 
             <h2>Instruções para visita</h2>
             <p>{orphanage.instructions}</p>
 
-            <div className="open-details">
+            <Styles.OpenDetails>
               <div className="hour">
                 <FiClock size={32} color="#15B6D6" />
                 Segunda à Sexta <br />
@@ -127,15 +128,15 @@ export default function Orphanage() {
                   fim de semana
                 </div>
               )}
-            </div>
+            </Styles.OpenDetails>
 
-            {/* <button type="button" className="contact-button">
+            <Styles.WhatssapButton type="button" className="contact-button">
               <FaWhatsapp size={20} color="#FFF" />
               Entrar em contato
-            </button> */}
-          </div>
-        </div>
+            </Styles.WhatssapButton> */
+          </Styles.OrphanageDetailsContent>
+        </Styles.OrphanageDetails>
       </main>
-    </div>
+    </Styles.Container>
   );
 }

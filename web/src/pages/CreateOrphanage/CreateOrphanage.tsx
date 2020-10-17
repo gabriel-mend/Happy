@@ -2,9 +2,9 @@ import React, { ChangeEvent, FormEvent, useState } from "react";
 import { Map, Marker, TileLayer } from 'react-leaflet';
 import { LeafletMouseEvent } from 'leaflet';
 
-import { FiPlus } from "react-icons/fi";
+import { FiPlus, FiX } from "react-icons/fi";
+import * as Styles from './styles';
 
-import './create-orphanage.css';
 import Sidebar from "../../components/Sidebar";
 import mapIcon from '../../utils/mapIcon';
 import api from "../../services/api";
@@ -74,12 +74,16 @@ export default function CreateOrphanage() {
     setPreviewImages(selectedImagesPreview);
   }
 
+  function handleDeleteImage(event: any) {
+    console.log(event.target)
+  }
+
   return (
-    <div id="page-create-orphanage">
+    <Styles.Container>
       <Sidebar />
 
       <main>
-        <form onSubmit={handleSubmit} className="create-orphanage-form">
+        <Styles.CreateOrphanageForm onSubmit={handleSubmit}>
           <fieldset>
             <legend>Dados</legend>
 
@@ -104,30 +108,33 @@ export default function CreateOrphanage() {
               )}
             </Map>
 
-            <div className="input-block">
+            <Styles.InputBlock>
               <label htmlFor="name">Nome</label>
               <input id="name" 
                 value={name} 
                 onChange={event => setName(event.target.value)}
               />
-            </div>
+            </Styles.InputBlock>
 
-            <div className="input-block">
+            <Styles.InputBlock>
               <label htmlFor="about">Sobre <span>Máximo de 300 caracteres</span></label>
               <textarea id="name" 
                 maxLength={300} 
                 value={about} 
                 onChange={event => setAbout(event.target.value)} 
               />
-            </div>
+            </Styles.InputBlock>
 
-            <div className="input-block">
-              <label htmlFor="images">Fotos</label>
+            <Styles.InputBlock>
+              <label htmlFor="images">Fotos <span>Selecione no máximo 5 imagens</span></label>
 
-              <div className="images-container">
+              <Styles.ImagesContainer>
                 {previewImages.map(image => {
                   return (
-                    <img src={image} alt={name} key={image}/>
+                    <Styles.ImageContainer key={image}>
+                      <FiX size={24} color="#FF669D" onClick={handleDeleteImage}/>
+                      <img src={image} alt={name}/>
+                    </Styles.ImageContainer>
                   )
                 })
 
@@ -135,37 +142,37 @@ export default function CreateOrphanage() {
                 <label htmlFor="image[]" className="new-image">
                   <FiPlus size={24} color="#15b6d6" />
                 </label>
-              </div>
+              </Styles.ImagesContainer>
 
               <input type="file" multiple onChange={handleSelectImages} id="image[]"/>
-            </div>
+            </Styles.InputBlock>
           </fieldset>
 
           <fieldset>
             <legend>Visitação</legend>
 
-            <div className="input-block">
+            <Styles.InputBlock>
               <label htmlFor="instructions">Instruções</label>
               <textarea id="instructions" 
                 value={instructions} 
                 onChange={event => 
                 setInstructions(event.target.value)} 
               />
-            </div>
+            </Styles.InputBlock>
 
-            <div className="input-block">
+            <Styles.InputBlock>
               <label htmlFor="opening_hours">Horário de visitas</label>
               <input 
                 id="opening_hours" 
                 value={opening_hours} 
                 onChange={event => setOpeningHours(event.target.value)} 
               />
-            </div>
+            </Styles.InputBlock>
 
-            <div className="input-block">
+            <Styles.InputBlock>
               <label htmlFor="open_on_weekends">Atende fim de semana</label>
 
-              <div className="button-select">
+              <Styles.ButtonSelect>
                 <button 
                   type="button" 
                   className={open_on_weekends ? 'active': ''}
@@ -180,16 +187,16 @@ export default function CreateOrphanage() {
                 >
                   Não
                 </button>
-              </div>
-            </div>
+              </Styles.ButtonSelect>
+            </Styles.InputBlock>
           </fieldset>
 
-          <button className="confirm-button" type="submit">
+          <Styles.ConfirmButton type="submit">
             Confirmar
-          </button>
-        </form>
+          </Styles.ConfirmButton>
+        </Styles.CreateOrphanageForm>
       </main>
-    </div>
+    </Styles.Container>
   );
 }
 
