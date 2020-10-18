@@ -1,7 +1,13 @@
 <h1 align="center"><img src="https://user-images.githubusercontent.com/49095200/95856473-75bf6180-0d30-11eb-9322-36421c290fbd.png" /></h1>
 
 <h2 align="center">👪 Plataforma com intuito de aproximar pessoas a casas de abrigo com crianças que precisam da sua atenção!</h2>
-
+<p align="center">
+ <a href="https://github.com/loadingGabriel/Happy#-sobre-o-projeto">Sobre</a> •
+ <a href="https://github.com/loadingGabriel/Happy#tecnologias-utilizadas">Tecnologias</a> • 
+ <a href="https://github.com/loadingGabriel/Happy#-como-executar-o-projeto">Como executar o projeto</a> • 
+ <a href="https://github.com/loadingGabriel/Happy#sobre-mim">Autor</a> • 
+ <a href="https://github.com/loadingGabriel/Happy#--agrecimentos">Agradecimentos</a>
+</p>
 <img src="https://user-images.githubusercontent.com/49095200/96370301-b73a7d00-1133-11eb-9b34-37953ab44988.jpg" />
 
 <h4 align="center"> 
@@ -20,6 +26,7 @@ Projeto desenvolvido durante a **NLW - Next Level Week** oferecida pela [Rockets
 * [Node.js](https://nodejs.org/en/)
 * [Expo](https://expo.io)
 * [TypeOrm](https://typeorm.io/#/)
+* [Styled Components](https://styled-components.com/)
 
 ## 🚀 Como executar o projeto
 
@@ -78,7 +85,24 @@ $ yarn start
 # O aplicação inciará (geralmente) na porta:3000 - acesse <http://localhost:3000>
 ```
 
-## Sobre mim
+### :iphone: Rodando a aplicação mobile (celular)
+```bash
+# Vá para a pasta mobile 
+$ cd mobile
+
+Instale o expo globalmente
+$ yarn global add expo-cli
+
+# Instale as dependências
+$ yarn install
+
+# Execute a aplicação 
+$ yarn start
+
+# O aplicação inciará, para que sejá possível utilizar use um emulador ou o seu próprio smartphone
+```
+
+## 👨🏻‍🚀 Sobre mim
 <a href="https://www.linkedin.com/in/gabriel-mendonca-pereira/">
  <img style="border-radius:50%" width="100px; "src="https://avatars0.githubusercontent.com/u/49095200?s=460&u=27a77c43fff5eab61be02a3fedfd7db554145981&v=4"/>
  <p>Gabriel Mendonça Pereira</p>
