@@ -108,5 +108,5 @@ $ yarn start
  <p>Gabriel Mendonça Pereira</p>
 </a>
 
-## 💜  Agrecimentos
+## 💜  Agradecimentos
 Obrigado [Rocketseat](https://github.com/Rocketseat) por disponibilizar esse conteúdo de maneira acessível a todos🚀.
